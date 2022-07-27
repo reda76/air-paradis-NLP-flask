@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 from model import predict
 
-
 app = Flask('Twitter Sentiment Analysis')
 
 @app.route('/')
@@ -13,7 +12,5 @@ def home():
         return render_template('predictform.html', prediction_text = label)
     return render_template('predictform.html')
 
-
 if __name__ == '__main__':
-    #call the functions here
     app.run()
